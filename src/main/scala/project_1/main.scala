@@ -53,9 +53,7 @@ object main {
 
     val seed = new java.util.Date().hashCode;
 
-    val nonce = sc.range(0, trials).mapPartitionsWithIndex((idx, iter) => {
-        iter.map(x => x)
-    })
+    val nonce = sc.range(0, trials).mapPartitionsWithIndex((idx, iter) => iter)
 
     val hash_result = nonce.map(x => (x.toString(), sha256Hash(x.toString() + header_1)))
 

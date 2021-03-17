@@ -1,4 +1,5 @@
-# 1) Trials on Local Machine
+# DAVID MCCABE - PROJECT 1  
+## 1) Trials on Local Machine
 **k=2**  
 	*xS*=1875416056this_is_a_bitcoin_block_of_67460444  
 	*hash*=00cd7780a82697ec5cc2ceabd34af4844ba9b83fce8a78c9137b0d1ed66061a1  
@@ -25,7 +26,7 @@
         *trials*=17,000,000  
 	*Time elapsed*=16s  
 
-# 2) Trials on GCP
+## 2) Trials on GCP
 **k=7**  
 	*xS*=1150962390this_is_a_bitcoin_block_of_67460444  
 	*hash*=000000078f1b557c2942b1a81ac7df02d90cc0e1c816a532c3cbe86e617e2b63  
@@ -36,5 +37,5 @@ I used the default cluster settings because I figured it wouldn't make a huge di
 This means 1 Master Node with 4 cores and 2 Worker Nodes with 4 cores, each with 15GB of memory. To find the number of trials, I first found 16^7, 
 since there are 16 equally likely options for each character in the hash. I then added 20,000,000 extra trials because some random numbers will be generated more than once.
 
-# 3) Changing from randomness to iteration
+## 3) Changing from randomness to iteration
 Iteration is more efficient than the randomized approach for large **k** because there is no chance for redundancy (Hashing a string that has already been checked).
